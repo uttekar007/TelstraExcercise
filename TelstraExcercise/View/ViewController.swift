@@ -20,6 +20,22 @@ class ViewController: UIViewController {
         t.translatesAutoresizingMaskIntoConstraints = false
         return t
     }()
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action:
+            #selector(ViewController.handleRefresh(_:)),
+                                 for: UIControlEvents.valueChanged)
+        
+        return refreshControl
+    }()
+    
+    lazy var activityIndicator : UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        activityIndicator.isHidden = false
+        activityIndicator.hidesWhenStopped = true
+        return activityIndicator
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,25 +60,40 @@ class ViewController: UIViewController {
     
     func addSubViewsAndConstraints() {
         
+        self.tableView.addSubview(self.refreshControl)
         self.view.addSubview(tableView)
+        self.view.addSubview(activityIndicator)
         
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0.0).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0.0).isActive = true
         tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0.0).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0.0).isActive = true
+        
+        activityIndicator.center = self.view.center
+
     }
     
+    
+    // Pull to refresh event/selector method
+    func handleRefresh(_ refreshControl: UIRefreshControl) {
+        self.callFactsAPIservice()
+        self.refreshControl.endRefreshing()
+        
+    }
+
     //Method to get data from remote server
     func callFactsAPIservice()  {
+        self.activityIndicator.startAnimating()
         factpresenter.getFacts(complete: { (facts) in
             self.fact = facts
             DispatchQueue.main.async {
                 self.title = self.fact?.title
                 self.tableView.reloadData()
+                self.activityIndicator.stopAnimating()
             }
         }) { (error) in
             print(error.localizedDescription)
-            
+            self.activityIndicator.stopAnimating()
         }
     }
 }
