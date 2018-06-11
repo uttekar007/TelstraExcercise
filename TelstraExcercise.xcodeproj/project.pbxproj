@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044B49B320CECC7A00F7C270 /* Facts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B49B220CECC7A00F7C270 /* Facts.swift */; };
+		044B49BB20CECF2300F7C270 /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B49BA20CECF2300F7C270 /* APIServices.swift */; };
+		044B49BD20CECFFF00F7C270 /* FactPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B49BC20CECFFF00F7C270 /* FactPresenter.swift */; };
 		04E32EB120CEC40A00903C22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E32EB020CEC40A00903C22 /* AppDelegate.swift */; };
 		04E32EB620CEC40A00903C22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E32EB420CEC40A00903C22 /* Main.storyboard */; };
 		04E32EB820CEC40A00903C22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E32EB720CEC40A00903C22 /* Assets.xcassets */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		044B49B220CECC7A00F7C270 /* Facts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facts.swift; sourceTree = "<group>"; };
+		044B49BA20CECF2300F7C270 /* APIServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
+		044B49BC20CECFFF00F7C270 /* FactPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactPresenter.swift; sourceTree = "<group>"; };
 		04E32EAD20CEC40A00903C22 /* TelstraExcercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelstraExcercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E32EB020CEC40A00903C22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04E32EB520CEC40A00903C22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,6 +41,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		044B49B820CECF0400F7C270 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				044B49B920CECF0400F7C270 /* Services */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		044B49B920CECF0400F7C270 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				044B49BA20CECF2300F7C270 /* APIServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		04E32EA420CEC40A00903C22 = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +79,7 @@
 				04E32EB020CEC40A00903C22 /* AppDelegate.swift */,
 				04E32EC220CEC5B600903C22 /* Model */,
 				04E32EC320CEC5B600903C22 /* Presenter */,
+				044B49B820CECF0400F7C270 /* Utility */,
 				04E32EC420CEC5B600903C22 /* View */,
 				04E32EB420CEC40A00903C22 /* Main.storyboard */,
 				04E32EB720CEC40A00903C22 /* Assets.xcassets */,
@@ -69,6 +92,7 @@
 		04E32EC220CEC5B600903C22 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				044B49B220CECC7A00F7C270 /* Facts.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -76,6 +100,7 @@
 		04E32EC320CEC5B600903C22 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				044B49BC20CECFFF00F7C270 /* FactPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -161,6 +186,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				04E32EC620CEC5B600903C22 /* ViewController.swift in Sources */,
+				044B49B320CECC7A00F7C270 /* Facts.swift in Sources */,
+				044B49BB20CECF2300F7C270 /* APIServices.swift in Sources */,
+				044B49BD20CECFFF00F7C270 /* FactPresenter.swift in Sources */,
 				04E32EB120CEC40A00903C22 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +353,7 @@
 				04E32EC120CEC40A00903C22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
