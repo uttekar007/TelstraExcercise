@@ -16,7 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.setWindowRootViewController()
         return true
+    }
+    
+    // Mehtod to set windows root view controller
+    func setWindowRootViewController()
+    {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        if let navigationRootViewContoller = storyboard.instantiateViewController(withIdentifier: "ViewController") as? ViewController {
+            
+            let windowsRootViewController = UINavigationController(rootViewController: navigationRootViewContoller)
+            self.window?.rootViewController = windowsRootViewController
+        }
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
