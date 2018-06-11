@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     
     let tableView : UITableView = {
         let t = UITableView()
+        t.estimatedRowHeight = 70 //put as per your cell row  height
+        t.rowHeight = UITableViewAutomaticDimension
         t.translatesAutoresizingMaskIntoConstraints = false
         return t
     }()
@@ -26,7 +28,7 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         
         // register a defalut cell
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(FactCellTableViewCell.self, forCellReuseIdentifier: "cell")
         
         // add subviews and set it's constaints
         self.addSubViewsAndConstraints()
@@ -82,11 +84,10 @@ extension ViewController : UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for:indexPath) as? FactCellTableViewCell else { return UITableViewCell() }
         if let ObjFact = fact?.rows[indexPath.row]
         {
-            cell.textLabel?.text = ObjFact.title
-            cell.detailTextLabel?.text = ObjFact.description
+            cell.configureCell(fact: ObjFact,tableView: tableView,indexPath: indexPath as IndexPath)
         }
         return cell
     }

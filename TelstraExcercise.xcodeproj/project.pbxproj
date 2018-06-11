@@ -10,6 +10,7 @@
 		044B49B320CECC7A00F7C270 /* Facts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B49B220CECC7A00F7C270 /* Facts.swift */; };
 		044B49BB20CECF2300F7C270 /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B49BA20CECF2300F7C270 /* APIServices.swift */; };
 		044B49BD20CECFFF00F7C270 /* FactPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B49BC20CECFFF00F7C270 /* FactPresenter.swift */; };
+		044B49BF20CEE41F00F7C270 /* FactCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B49BE20CEE41F00F7C270 /* FactCellTableViewCell.swift */; };
 		04E32EB120CEC40A00903C22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E32EB020CEC40A00903C22 /* AppDelegate.swift */; };
 		04E32EB620CEC40A00903C22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E32EB420CEC40A00903C22 /* Main.storyboard */; };
 		04E32EB820CEC40A00903C22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E32EB720CEC40A00903C22 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		044B49B220CECC7A00F7C270 /* Facts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facts.swift; sourceTree = "<group>"; };
 		044B49BA20CECF2300F7C270 /* APIServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
 		044B49BC20CECFFF00F7C270 /* FactPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactPresenter.swift; sourceTree = "<group>"; };
+		044B49BE20CEE41F00F7C270 /* FactCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactCellTableViewCell.swift; sourceTree = "<group>"; };
 		04E32EAD20CEC40A00903C22 /* TelstraExcercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelstraExcercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E32EB020CEC40A00903C22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04E32EB520CEC40A00903C22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				04E32EC520CEC5B600903C22 /* ViewController.swift */,
+				044B49BE20CEE41F00F7C270 /* FactCellTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04E32EC620CEC5B600903C22 /* ViewController.swift in Sources */,
+				044B49BF20CEE41F00F7C270 /* FactCellTableViewCell.swift in Sources */,
 				044B49B320CECC7A00F7C270 /* Facts.swift in Sources */,
 				044B49BB20CECF2300F7C270 /* APIServices.swift in Sources */,
 				044B49BD20CECFFF00F7C270 /* FactPresenter.swift in Sources */,
